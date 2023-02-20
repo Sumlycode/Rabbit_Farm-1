@@ -49,24 +49,52 @@
             if (!isset($_GET['page']) && empty($_GET['page'])) {
               include('pages/dashboard/overview.php');
             }
+
+            //vaccine
             elseif (isset($_GET['page']) && $_GET['page'] == 'vaccine'){
               include('pages/vaccine/vaccine.php'); 
             }
+             //vaccine End
+
+             // rabbit
             elseif (isset($_GET['page']) && $_GET['page'] == 'rabbit_data'){
               include('pages/rabbit/rb_data.php'); 
             }
+            elseif (isset($_GET['page']) && $_GET['page'] == 'rabbit_check'){
+              include('pages/rabbit/rb_check.php'); 
+            }
+          
             elseif (isset($_GET['page']) && $_GET['page'] == 'rabbit_hb'){
               include('pages/rabbit/rb_hb.php'); 
             }
             elseif (isset($_GET['page']) && $_GET['page'] == 'rabbit_heal'){
               include('pages/rabbit/rb_heal.php'); 
             }
+            // rabbit end
+
+            //admin&emp
             elseif (isset($_GET['page']) && $_GET['page'] == 'admin'){
               include('pages/members/admin.php'); 
             }
             elseif (isset($_GET['page']) && $_GET['page'] == 'emp'){
               include('pages/members/emp.php'); 
             }
+             //admin&emp End
+
+              // Checklist
+            elseif (isset($_GET['page']) && $_GET['page'] == 'general_care'){
+              include('pages/checklist/general_care.php'); 
+            }
+            elseif (isset($_GET['page']) && $_GET['page'] == 'general_care'){
+              include('pages/checklist/general_care.php'); 
+            }
+            elseif (isset($_GET['page']) && $_GET['page'] == 'health'){
+              include('pages/checklist/health.php'); 
+            }
+            elseif (isset($_GET['page']) && $_GET['page'] == 'breeding'){
+              include('pages/checklist/breeding.php'); 
+            }
+            // Checklist End
           ?> 
 
 		    </div><!--//container-fluid-->

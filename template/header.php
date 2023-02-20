@@ -152,6 +152,7 @@
                         </a>
                     </li>
 
+
                     <li class="nav-item">
                         <a class="nav-link <?php echo isset($_GET['page']) && $_GET['page'] == 'vaccine' ? 'active' : '' ?>" href="?page=vaccine">
                             <span class="nav-icon">
@@ -166,6 +167,7 @@
                             <span class="nav-link-text">ข้อมูลยาวัคซีน</span>
                         </a><!--//nav-link-->
                     </li><!--//nav-item-->
+                    
                     <li class="nav-item has-submenu">
                         <a class="nav-link submenu-toggle <?php echo isset($_GET['page']) && $_GET['page'] == 'rabbit_data' || isset($_GET['page']) && $_GET['page'] == 'rabbit_hb' || isset($_GET['page']) && $_GET['page'] == 'rabbit_heal' ? 'active' : '' ?>" data-bs-toggle="collapse" data-bs-target="#submenu-1" aria-expanded="false" aria-controls="submenu-1">
                             <span class="nav-icon">
@@ -187,6 +189,7 @@
                         <div id="submenu-1" class="collapse submenu submenu-1" data-bs-parent="#menu-accordion">
                             <ul class="submenu-list list-unstyled">
                                 <li class="submenu-item"><a class="submenu-link <?php echo isset($_GET['page']) && $_GET['page'] == 'rabbit_data' ? 'active' : '' ?>" href="?page=rabbit_data">ข้อมูลกระต่าย</a></li>
+                                <li class="submenu-item"><a class="submenu-link <?php echo isset($_GET['page']) && $_GET['page'] == 'rabbit_check' ? 'active' : '' ?>" href="?page=rabbit_check">ตรวจสุขภาพกระต่าย</a></li>
                                 <li class="submenu-item"><a class="submenu-link <?php echo isset($_GET['page']) && $_GET['page'] == 'rabbit_hb' ? 'active' : '' ?>" href="?page=rabbit_hb">ข้อมูลการผสมพันธ์ุ</a></li>
                                 <li class="submenu-item"><a class="submenu-link <?php echo isset($_GET['page']) && $_GET['page'] == 'rabbit_heal' ? 'active' : '' ?>" href="?page=rabbit_heal">ข้อมูลการรับการักษา</a></li>
                             </ul>
@@ -241,7 +244,34 @@
                                 <li class="submenu-item"><a class="submenu-link <?php echo isset($_GET['page']) && $_GET['page'] == 'emp' ? 'active' : '' ?>" href="?page=emp">ข้อมูลพนักงาน</a></li>
                             </ul>
                         </div>
-                    </li><!--//nav-item-->				    
+                    </li><!--//nav-item-->	
+                    
+                    <li class="nav-item has-submenu">
+                        <a class="nav-link submenu-toggle <?php echo isset($_GET['page']) && $_GET['page'] == 'rabbit_data' || isset($_GET['page']) && $_GET['page'] == 'rabbit_hb' || isset($_GET['page']) && $_GET['page'] == 'rabbit_heal' ? 'active' : '' ?>" data-bs-toggle="collapse" data-bs-target="#submenu-3" aria-expanded="false" aria-controls="submenu-3">
+                            <span class="nav-icon">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                                    <path fill-rule="evenodd" d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z"/>
+                                    <circle cx="3.5" cy="5.5" r=".5"/>
+                                    <circle cx="3.5" cy="8" r=".5"/>
+                                    <circle cx="3.5" cy="10.5" r=".5"/>
+                                </svg>
+                            </span>
+                            <span class="nav-link-text">Checklist Today</span>
+                            <span class="submenu-arrow">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                                </span><!--//submenu-arrow-->
+                        </a><!--//nav-link-->
+                        <div id="submenu-3" class="collapse submenu submenu-3" data-bs-parent="#menu-accordion">
+                            <ul class="submenu-list list-unstyled">
+                                <li class="submenu-item"><a class="submenu-link <?php echo isset($_GET['page']) && $_GET['page'] == 'general_care' ? 'active' : '' ?>" href="?page=general_care">ด้านการดูแลทั่ว</a></li>
+                                <li class="submenu-item"><a class="submenu-link <?php echo isset($_GET['page']) && $_GET['page'] == 'health' ? 'active' : '' ?>" href="?page=health">ด้านสุขภาพ</a></li>
+                                <li class="submenu-item"><a class="submenu-link <?php echo isset($_GET['page']) && $_GET['page'] == 'breeding' ? 'active' : '' ?>" href="?page=breeding">ด้านผสมพันธุ์</a></li>
+                            </ul>
+                        </div>
+                    </li><!--//nav-item-->			    
                 </ul><!--//app-menu-->
             </nav><!--//app-nav-->
         </div><!--//sidepanel-inner-->
